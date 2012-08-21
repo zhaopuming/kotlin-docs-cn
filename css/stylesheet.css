@@ -356,6 +356,28 @@ footer a:hover {
   color: #444;
 }
 
+em,strong {
+  font-weight: bold;
+}
+
+
+div.warn {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #FFD;
+  border: 1px solid #F7DF92;
+  padding: 10px;
+}
+
+div.info {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #E0EFFF;
+  border: 1px solid #9EB6D4;
+  padding: 10px;
+}
 /* MISC */
 .clearfix:after {
   clear: both;
