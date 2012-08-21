@@ -5,4 +5,4 @@ layout: default
 
 # Contents
 
-## [Welcome](/posts/welcome.html)
+## [Welcome](/posts/welcome)
