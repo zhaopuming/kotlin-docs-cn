@@ -160,7 +160,7 @@ aside a.button {
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #222;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 13px;
 }
 
@@ -177,6 +177,7 @@ pre {
   overflow: auto;
   border: solid 1px #f2f2f2;
 }
+
 pre code {
   color: #2879d0;
   background-color: #fff;
@@ -362,12 +363,13 @@ em,strong {
 
 
 div.warn {
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: #FFD;
   border: 1px solid #F7DF92;
   padding: 10px;
+  padding-left: 20px;
 }
 
 div.info {
@@ -377,6 +379,7 @@ div.info {
   background-color: #E0EFFF;
   border: 1px solid #9EB6D4;
   padding: 10px;
+  padding-left: 20px;
 }
 /* MISC */
 .clearfix:after {

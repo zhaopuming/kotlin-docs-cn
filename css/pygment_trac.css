@@ -1,4 +1,4 @@
-.highlight  { background: #ffffff; margin-left: 20px;}
+.highlight  { background: #ffffff; margin-left: 10px;}
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
@@ -67,3 +67,9 @@
 .type-csharp .highlight .nn { color: #000000 }
 .type-csharp .highlight .s { color: #A31515 }
 .type-csharp .highlight .sc { color: #A31515 }
+
+.highlight pre {
+    border: 1px dotted #B2C2F2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
