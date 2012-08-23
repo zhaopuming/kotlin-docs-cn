@@ -67,3 +67,32 @@ Kotlin的稳定里程碑版本可以从JetBrains的[插件库](http://www.jetbra
 * Enjoy!
 
 
+## Github上的Kotlin工程
+
+请注意Github上的[主工程](https://github.com/JetBrains/kotlin)本身是一个Java工程，是用来创建Kotlin的编译器和IDEA插件的。这个工程不能使用已经安装过Kotlin插件的IDEA打开!
+
+
+但是[kotlin标准库工程](https://github.com/JetBrains/kotlin/tree/master/libraries)本身全部是Kotlin代码，用来建立Kotlin的标准库，测试和相关工具。这个工程是可以使用附带Kotlin插件的IDEA来打开。你需要指定Kotlin Runtime。
+
+
+## 下载Kotlin运行时库
+
+IDEA的插件已经包含了一个Kotlin运行时库。如果你想在命令行或者Ant环境下自己使用Kotlin，也需要这个库（或者除非你使用[Kotlin Maven插件](http://confluence.jetbrains.net/display/Kotlin/Kotlin+Build+Tools#KotlinBuildTools-Maven)这样的构建工具)。
+
+Kotlin运行时库可以从我们的构建服务器下载（使用"Guest"帐号登录，在"Artifacts"下查找）：
+
+* [http://teamcity.jetbrains.com/viewType.html?tab=buildTypeStatusDiv&buildTypeId=bt345&guest=1](http://teamcity.jetbrains.com/viewType.html?tab=buildTypeStatusDiv&buildTypeId=bt345&guest=1) - IntelliJ IDEA 11  
+* [http://teamcity.jetbrains.com/viewType.html?buildTypeId=bt389&guest=1](http://teamcity.jetbrains.com/viewType.html?buildTypeId=bt389&guest=1) - IntelliJ IDEA 12 EAPs
+
+
+## 常见问题
+
+打开Kotlin文件时，偶尔会出现很多红色警告。这可能意味着IDEA插件找不到Kotlin的运行时库。
+
+* 访问 文件(File) -> 工程结构(Project Structure)...
+* 选择“库”(Libraries)标签页
+* 你能否看到Kotlin运行时库？ 它是否指向一个kotlin-runtime.jar？
+* 如果不是，则删除掉，重新添加一个。
+
+
+
