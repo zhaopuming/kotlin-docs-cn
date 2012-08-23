@@ -91,8 +91,9 @@ Kotlin运行时库可以从我们的构建服务器下载（使用"Guest"帐号�
 
 * 访问 文件(File) -> 工程结构(Project Structure)...
 * 选择“库”(Libraries)标签页
-* 你能否看到Kotlin运行时库？ 它是否指向一个kotlin-runtime.jar？
-* 如果不是，则删除掉，重新添加一个。
+* 你能否看到Kotlin运行时库？ 它是否指向一个kotlin-runtime.jar？ 
+* 如果不是，则删除掉，重新添加一个，并指向正确的kotlin-runtime.jar。
+
 
 
 
