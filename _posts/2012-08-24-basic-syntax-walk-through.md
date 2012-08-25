@@ -55,8 +55,7 @@ fun printSum(a : Int, b : Int) {
 参看[函数](posts/functions)  
 参看[Hello, world!](posts/hello-world)
 
-### 定义一个局部变量
-
+###  定义一个局部变量 <a id="define-local-variable">#</a>
 赋值一次（只读）的局部变量：
 
 {% highlight java %}

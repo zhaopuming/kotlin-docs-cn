@@ -1,5 +1,6 @@
 ---
 layout: default
+original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 ---
 
 
@@ -16,5 +17,4 @@ layout: default
 
 ## [和Java比较 | Comparison to Java](posts/comparison-to-java)
 ## [和Scala比较 | Comparison to Scala](posts/comparison-to-scala)
-
-
+## [模块和编译 | Modules and Compilation](posts/modules-and-compilation)
