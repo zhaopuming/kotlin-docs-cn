@@ -203,19 +203,24 @@ hr {
 
 table {
   width: 100%;
-  border: 1px solid #ebebeb;
+  border: 1px solid #DDD;
 }
 
 th {
-  font-weight: 500;
+  font-weight: bold;
+  background-color: #F0F0F0;
+  border: 1px solid #DDD;
 }
 
 td {
-  border: 1px solid #ebebeb;
+  border: 1px solid #DDD;
   text-align: center; 
   font-weight: 300;
 }
 
+th,td {
+  padding: 5px 5px 5px 5px;
+}
 form {
   background: #f2f2f2;
   padding: 20px;

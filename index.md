@@ -20,3 +20,7 @@ original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 ## [模块和编译 | Modules and Compilation](posts/modules-and-compilation)
 ## [包 | Packages](posts/packages)
 ## [函数 | Functions](posts/functions)
+> #### [符号重载 | Operator Overloading](posts/operator-overloading)
+> #### [扩展函数 | Extension functions](posts/extension-functions)
+> #### [类型安全的Groovy风格构建器 | Type-safe Goovy-style builders](posts/type-safe-groovy-style-builders)
+
