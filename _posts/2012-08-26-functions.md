@@ -274,7 +274,7 @@ fun Int.abs() : Boolean = if (this >=0) this else -this
 print(-1.abs())
 {% endhighlight %}
 
-## 高阶函数
+## <a id="higher-order-functions"><!-- --></a> 高阶函数
 
 *高阶函数*是指接受函数作为参数的函数，或者返回一个函数的函数。一个很好的例子是lock()函数：
 接受参数为锁定的对象和一个函数，接着将对象锁住，运行函数，再释放锁定。

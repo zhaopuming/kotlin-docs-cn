@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Kotlin官方文档中文版
 original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 ---
 
