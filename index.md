@@ -24,4 +24,4 @@ original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 > #### [符号重载 | Operator Overloading](posts/operator-overloading)
 > #### [扩展函数 | Extension functions](posts/extension-functions)
 > #### [类型安全的Groovy风格构建器 | Type-safe Goovy-style builders](posts/type-safe-groovy-style-builders)
-
+## [属性和字段 | Properties and Fields](posts/properties-and-fields)
