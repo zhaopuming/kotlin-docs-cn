@@ -180,5 +180,145 @@ html {
 }
 {% endhighlight %}
 
-所以基本上，我们直接在标签体中添加文字，但前面需要在前面加一个"+"符号。事实上她
+所以基本上，我们直接在标签体中添加文字，但前面需要在前面加一个"+"符号。
+事实上这个符号是用一个扩展函数`plus`来定义的。
+`plus`是抽象类`TagWithText`(`Title`的父类)的成员函数。
+
+
+{% highlight java %}
+fun String.plus() {
+  children.add(TextElement(this))
+}
+{% endhighlight %}
+
+所以，前缀'+'所做的事情是把字符串用`TextElement`对象包裹起来，并添加到children集合上，这样就正确加入到标签树中了。
+
+所有这些都定义在名字空间`html`里，上面的构建器例子在代码顶端导入了这个名字空间。
+下一节里你可以详细的浏览这个名字空间中的所有定义。
+
+## 名字空间`html`的完整定义
+
+下面是名字空间`html`的定义（只列出了上面的例子中用到的元素）。它可以生成一个HTML树。
+代码中大量使用了[扩展函数](posts/extension-functions)和[扩展函数字面量](posts/function-literals#extensions)技术
+
+{% highlight java %}
+namespace html { 
+ 
+  abstract class Factory<T> { 
+    fun create() : T 
+  } 
+ 
+  abstract class Element 
+ 
+  class TextElement(val text : String) : Element 
+ 
+  abstract class Tag(val name : String) : Element { 
+    val children = ArrayList<Element>() 
+    val attributes = HashMap<String, String>() 
+ 
+    protected fun initTag<T : Element>(init : T.() -> Unit) : T 
+      where class object T : Factory<T> { 
+      val tag = T.create() 
+      tag.init() 
+      children.add(tag) 
+      return tag 
+    } 
+  } 
+ 
+  abstract class TagWithText(name : String) : Tag(name) { 
+    fun String.plus() { 
+      children.add(TextElement(this)) 
+    } 
+  } 
+ 
+  class HTML() : TagWithText("html") { 
+    class object : Factory<HTML> { 
+      override fun create() = HTML() 
+    } 
+ 
+    fun head(init : Head.() -> Unit) = initTag(init) 
+ 
+    fun body(init : Body.() -> Unit) = initTag(init) 
+  } 
+ 
+  class Head() : TagWithText("head") { 
+    class object : Factory<Head> { 
+      override fun create() = Head() 
+    } 
+ 
+    fun title(init : Title.() -> Unit) = initTag(init) 
+  } 
+ 
+  class Title() : TagWithText("title") 
+ 
+  abstract class BodyTag(name : String) : TagWithText(name) { 
+  } 
+ 
+  class Body() : BodyTag("body") { 
+    class object : Factory<Body> { 
+      override fun create() = Body() 
+    } 
+ 
+    fun b(init : B.() -> Unit) = initTag(init) 
+    fun p(init : P.() -> Unit) = initTag(init) 
+    fun h1(init : H1.() -> Unit) = initTag(init) 
+    fun a(href : String, init : A.() -> Unit) { 
+      val a = initTag(init) 
+      a.href = href 
+    } 
+  } 
+ 
+  class B() : BodyTag("b") 
+  class P() : BodyTag("p") 
+  class H1() : BodyTag("h1") 
+  class A() : BodyTag("a") { 
+    var href : String 
+      get() = attributes["href"] 
+      set(value) { attributes["href"] = value } 
+  } 
+ 
+  fun html(init : HTML.() -> Unit) : HTML { 
+    val html = HTML() 
+    html.init() 
+    return html 
+  } 
+ 
+}
+{% endhighlight %} <!--[]()-->
+
+
+## 附录. 改善Java类
+
+上面的代码中有一段很好的：
+
+{% highlight java %}
+class A() : BodyTag("a") {
+  var href : String
+    get() = attributes["href"]
+    set(value) { attributes["href"] = value }
+}
+{% endhighlight %} <!--[]()-->
+
+我们访问映射(Map) `attributes`的方式，是把它当作 "关联数组" (associate array)来访问的：用`[]`操作符。
+依照编译器的[惯例](posts/operator-overloading)它被翻译成get(K)和set(K, V)，正好。但是我们说过，
+attributes是一个**Java**映射，也就是说，它没有set(K, V)函数。(译注：Java的映射中的函数是put(K, V))。
+在Kotlin中，这个问题很容易解决：
+
+{% highlight java %}
+fun <K, V> Map<K, V>.set(key : K, value : V) = this.put(key, value)
+{% endhighlight %}
+
+所以我们只要给`Map`类添加一个扩展函数set(K, V)， 并代理`Map`类原有的put(K, V)函数，就可以让**Java**类使用Kotlin的操作符号了。
+
+## 接下来
+
+#### 示例
+* [与Java对比](posts/comparison-to-java)
+
+#### 函数
+* [属性与字段](posts/properties-and-fields)
+
+
+
+
 
