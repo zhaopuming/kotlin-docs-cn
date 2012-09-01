@@ -27,4 +27,15 @@ original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 
 ## [属性和字段 | Properties and Fields](posts/properties-and-fields)
 ## [基本类型 | Basic types](posts/basic-types)
-## [字符串 | Strings](posts/strings)
+> #### [字符串 | Strings](posts/strings)
+
+## [表达式 | Expressions](posts/expressions)
+> #### [基本操作](posts/basic-operations)
+> #### [控制结构](posts/control-structures)
+> #### [函数字面量](posts/function-literals)
+> #### [返回和跳转](posts/returns-and-jumps)
+> #### [范围](posts/ranges)
+> #### [This表达式](posts/this-expression)
+> #### [元组](posts/tuples)
+> #### [类型转换](posts/type-casts)
+
