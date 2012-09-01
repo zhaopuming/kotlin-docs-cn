@@ -44,7 +44,7 @@ val max = if (a > b) {
 
 在[这里](posts/grammar#if)参看**if**的语法
 
-## When-表达式
+## <a id="when"><!----></a> When-表达式
 
 **When**替代了**C**-风格语言的**switch**操作符。最简单的形式如下：
 
