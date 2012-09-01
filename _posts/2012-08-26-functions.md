@@ -243,7 +243,7 @@ reformat(str, wordSeparator = '_')
 <!--_-->
 
 
-## 中序调用 <a id="infix-calls"><!--#--></a>
+##  <a id="infix-calls"><!----></a> 中序调用
 
 如果成员函数(或者[扩展函数](posts/extension-functions)只有一个参数，那么可以用*中序*的方式调用。
 即参数不需要"."和括号：
@@ -259,6 +259,7 @@ reformat(str, wordSeparator = '_')
 中序调用的优先级是左关联的，即 `1 foo 2 bar 3` 意味着：`(1 foo 2) bar 3`
 
 了解优先级，参看[语法](posts/grammar#precedence)
+
 
 ## 扩展函数
 
