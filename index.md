@@ -39,4 +39,25 @@ original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 > #### [元组](posts/tuples)
 > #### [类型转换](posts/type-casts)
 
+## [模式匹配 | Pattern matching](posts/pattern-matching)
+## [类和继承 | Classes and Inheritance](posts/classes-and-inheritance)
+> #### [枚举类 | Enum classes](posts/enum-classes)
+> #### [内嵌类 | Nested classes](posts/nested-classes)
+> #### [对象表达式和声明 | Object expressions and Declarations](posts/object-expressions)
+
+## [泛型 | Generics](posts/generics)
+> #### [运行时类型信息 | Runtime Type Information](posts/rtti)
+
+## [Null安全 | Null-safety](posts/null-safety)
+## [异常 | Exceptions](posts/exceptions)
+## [标注 | Annotations](posts/annotations)
+## [Java互操作 | Java interoperability](posts/java-interoperability)
+## [编程风格 | Coding Conventions](posts/coding-conventions)
+## [Kotlin构建工具 | Kotlin Build Tools](posts/build-tools)
+## [语法 | Grammar](posts/grammar)
+## [参与和贡献 | Kontributions](posts/kontributions)
+## [演讲和资料 | Talks and Publications](posts/talks-and-publications)
+## [Kotlin Doc](posts/kotlin-doc)
+
+
 
