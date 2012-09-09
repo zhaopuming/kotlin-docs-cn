@@ -159,7 +159,7 @@ when(term) {
 参看相关的<a href="http://youtrack.jetbrains.com/issue/KT-771">issue</a>
 </div>
 
-## For 循环
+## <a id="for"><!----></a> For 循环
 
 **For**循环可以对任何提供迭代器(iterator)的集合进行遍历，语法如下：
 {% highlight java %}
@@ -195,7 +195,7 @@ for (i in array.indices)
 
 在[这里](/posts/grammar#for)参看**for**循环的语法定义。
 
-## While和do..while循环
+## <a id="while"><!----></a> While和do..while循环
 
 **While**和**do..while**和以往一样：
 {% highlight java %}
