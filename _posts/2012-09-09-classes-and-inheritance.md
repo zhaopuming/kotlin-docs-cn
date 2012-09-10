@@ -169,7 +169,7 @@ class C() : A(), B {
     super<B>.f() // 调用B.f()
   }
 }
-{% endhighlight %} <!----></B>
+{% endhighlight %} <!----> <B></B>
 
 类C同时继承A和B是可以的，而且我们在调用a()和b()函数时没有任何问题，因为他们在C的基类中只有一个实现。
 但是f()函数则在A,B中都有实现，所以我们*必须*在C中覆盖f()，并且提供我们的实现以消除歧义。
@@ -366,3 +366,4 @@ IDE可以自动[生成代理方法和](http://www.jetbrains.com/idea/features/co
 * [枚举类](posts/enum-classes)
 * [内嵌类](posts/nested-classes)
 * [对象表达式和声明](posts/object-expressions)
+
