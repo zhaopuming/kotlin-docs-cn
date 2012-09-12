@@ -1,4 +1,4 @@
----
+-.--
 layout: doc
 title: Null安全 | Null-safety
 original-doc: http://confluence.jetbrains.net/display/Kotlin/Null-safety
