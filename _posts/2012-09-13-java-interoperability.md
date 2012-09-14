@@ -50,6 +50,36 @@ val iterator = list.iterator() // 可空 (普通方法)
 {% endhighlight %}
 
 
+### Kotlin中调用Java泛型
+
+Kotlin的泛型和**Java**稍有不同(参看[泛型](posts/generics))。在Kotlin中导入**Java**的类型时，
+我们需要进行以下转换：
+
+* **Java**的通配符需要转换成Kotlin的[类型映射](posts/generics#type-projections)
+  * `Foo<? extends Bar>` 变成 `Foo<out Bar>`
+  * `Foo<? super Bar>` 变成 `Foo<in Bar>`
+* **Java**的生肉类型需要转换成Kotlin的[星号映射](posts/generics#star-projections)
+  * `List`变成`List<*>`，即`List<out Any?>`
+
+另外，**Java**的类型信息不会[保留到运行时](posts/generics#reified)，即**Java**的对象不会
+携带传入它的构造函数的真实类型参数的信息。即，`new ArrayList<Integer>()`和`new ArrayList<Character>()`在运行时无法区分。
+这使得在运行时不可能进行牵涉到**Java**泛型的**instanceof**判定。
+Koltin只允许[星号映射](posts/generics#star-projections)的**Java**泛型类型进行**is**检查。
+
+{% highlight java %}
+if (a is java.util.List<Int>) // Error: 无法检测是否是Int的List
+// 但是
+if (a is java.util.List<*>) // OK: 但是无法保证列表的内容的类型。
+{% endhighlight %}
+
+## 不可型变数组 (Invariant arrays)
+Kotlin中的数组是[不可型变](posts/generics#declaration-site-variance)的，这一点和[**Java**](http://c2.com/cgi/wiki?JavaArraysBreakTypeSafety)不同。
+所有类型为java.lang.Object的引用，都转变为Any?，因为可能使用任何种类的引用。
+
+
+
+
+
 
 
 
