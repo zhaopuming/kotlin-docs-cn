@@ -56,8 +56,10 @@ original-doc: http://confluence.jetbrains.net/display/Kotlin/Welcome
 ## [Kotlin构建工具 | Kotlin Build Tools](posts/build-tools)
 ## [语法 | Grammar](posts/grammar)
 ## [参与和贡献 | Kontributions](posts/kontributions)
-## [演讲和资料 | Talks and Publications](posts/talks-and-publications)
+## [演讲和资料 | Talks and Publications](posts/talks)
 ## [Kotlin Doc](posts/kotlin-doc)
+
+
 
 
 
