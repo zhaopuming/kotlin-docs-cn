@@ -100,21 +100,20 @@ Kotlin的maven组件发布到 <http://repository.jetbrains.com/>
 
 在你的pom或者settings文件里加入这个资源库：
 {% highlight xml %}
-
-{%java  endhighlight %}
-sitories>
+<repositories>
     <repository>
         <id>jetbrains-all</id>
         <url>http://repository.jetbrains.com/all</url>
     </repository>
 </repositories>
-  
+
 <pluginRepositories>
     <pluginRepository>
         <id>jetbrains-all</id>
         <url>http://repository.jetbrains.com/all</url>
     </pluginRepository>
 </pluginRepositories>
+{% endhighlight %}
 
 ### 版本
 用**kotlin.version**定义Kotlin的版本。可能的值如下：
