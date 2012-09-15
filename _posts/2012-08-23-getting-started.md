@@ -53,7 +53,7 @@ Kotlin的稳定里程碑版本可以从JetBrains的[插件库](http://www.jetbra
 * 输入文件名，比如Foo
 * 这时候IDE会在编辑窗口的右上方提示你选择Kotlin运行环境(Kotlin Runtime)
 * 你需要指定到下载的Kotlin运行环境jar包(看下面)
-* 输入如下的代码:
+* 输入如下的代码: <!--abc--> 
 
 {% highlight java %}
     package hello
