@@ -60,7 +60,7 @@ Unit的返回类型的函数，也不需要显示指定返回类型：
 如果一个函数有代码块主体(在花括号之间，不是'='后)，并且返回Unit，则函数声明可以省略掉返回值类型的标记：
 
 {% highlight java %}
-fun printHello(name : String?) : Unit {
+fun printHello(name : String?) {
 
   // ...
 }
